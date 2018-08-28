@@ -200,6 +200,7 @@ var fizzBuzz = function(n) {
 // countOccurrence([2,7,4,4,1,4], 4) // 3
 // countOccurrence([2,'banana',4,4,1,'banana'], 'banana') // 2
 var countOccurrence = function(array, value) {
+
 };
 
 // 21. Write a recursive version of map.
@@ -212,6 +213,16 @@ var rMap = function(array, callback) {
 // countKeysInObj(obj, 'r') // 1
 // countKeysInObj(obj, 'e') // 2
 var countKeysInObj = function(obj, key) {
+  var num = 0;
+  for (let k in obj){
+    if (k === key){
+      num += 1
+    }
+    if (typeof obj[k] === "object"){
+      num += countKyesInObj(obj[k], key)
+    }
+  }
+  return num
 };
 
 // 23. Write a function that counts the number of times a value occurs in an object.
