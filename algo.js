@@ -308,6 +308,7 @@ var flatten = function(array) {
     if (typeof array[i] === "object"){
       newarray.concat(flatten(array[i]))
     } else {
+      console.log(array[i])
       newarray.push(array[i])
     }
   }
