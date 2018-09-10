@@ -170,6 +170,13 @@ var gcd = (num1,num2) => {
 // compareStr('house', 'houses') // false
 // compareStr('tomato', 'tomato') // true
 var compareStr = function(str1, str2) {
+  if (str1[0] !== str2[0]){
+    return false
+  } else if (str1 === "" && str2 === ""){
+    return true
+  } else {
+    return compareStr(str1.substr(1), str2.substr(1))
+  }
 };
 
 // 16. Write a function that accepts a string and creates an array where each letter
