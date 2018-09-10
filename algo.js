@@ -136,6 +136,7 @@ var multiply = function(x, y) {
 // 13. Write a function that divides two numbers without using the / operator or
 // Math methods to arrive at an approximate quotient (ignore decimal endings).
 var divide = function(x, y){
+
 };
 
 // 14. Find the greatest common divisor (gcd) of two positive numbers. The GCD of two
@@ -150,6 +151,19 @@ var gcd = function(x, y) {
     return gcd(y, x%y)
   }
 };
+
+var gcd = (num1,num2) => {
+	n1 = num1;
+	n2 = num2;
+	while (n1 !== n2) {
+		if (n1>n2){
+			n1 = n1-n2;
+        } else {
+			n2 = n2-n1;
+        }
+    }
+	return n1
+}
 
 // 15. Write a function that compares each character of two strings and returns true if
 // both are identical.
