@@ -262,13 +262,17 @@ var fibonacci = function(n) {
   return fib
 };
 
-var fibonacci = function(n) {
-  let fib = [];
-  fib[0] = 0;
-  fib[1] = 1;
-  
-  return fib
-};
+function fibonacci(num) {
+  if (n <= 1) {
+    return [0,1];
+  } else {
+    var s = nthFibo(n - 1);
+    s.push(s[s.length - 1] + s[s.length - 2]);
+    return s;
+  }
+
+}
+
 
 // 26. Return the Fibonacci number located at index n of the Fibonacci sequence.
 // [0,1,1,2,3,5,8,13,21]
@@ -276,7 +280,8 @@ var fibonacci = function(n) {
 // nthFibo(7); // 13
 // nthFibo(3); // 2
 var nthFibo = function(n) {
-
+  if (num <= 1) return 1;
+  return [0].concat(fibonacci(num - 1) + fibonacci(num - 2));
 };
 
 // 27. Given an array of words, return a new array containing each word capitalized.
