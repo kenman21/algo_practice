@@ -243,9 +243,9 @@ var countOccurrence = function(array, value) {
 // rMap([1,2,3], timesTwo); // [2,4,6]
 var rMap = function(array, callback) {
   if (array.length === 1){
-
+    return [callback(array[0])]
   } else {
-
+    return [callback(array[0])].concat(rMap(array.slice(1)))
   }
 };
 
@@ -492,3 +492,20 @@ var mergeSort = function(array) {
 // obj1 === obj2 // false
 var clone = function(input) {
 };
+
+var common = function(number1, number2){
+  n1 = number1.toString();
+  n2 = number2.toString();
+  number = "";
+  let addition = "";
+  for (let i = 0; i < n1.length; i++){
+    addition = n1[i];
+    for (let j = 0; j < n2.length; j++){
+      if (n1[i] === n2[j]){
+        addition = "";
+      }
+    }
+    number += addition
+  }
+  return number
+}
