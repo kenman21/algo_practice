@@ -557,3 +557,22 @@ var pyramid = (num) => {
 
     }
 }
+
+class Queue {
+
+	constructor() {
+		this.items = [];
+    }
+
+	show () {
+		return this.items
+    }
+
+	add (num) {
+		this.items.unshift(num)
+    }
+
+	remove (num) {
+		return this.items.pop()
+    }
+}	
