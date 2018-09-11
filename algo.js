@@ -321,8 +321,8 @@ function fibonacci(num) {
 // nthFibo(7); // 13
 // nthFibo(3); // 2
 var nthFibo = function(n) {
-  if (num <= 1) return 1;
-  return [0].concat(fibonacci(num - 1) + fibonacci(num - 2));
+  if (n <= 1) return 1;
+  return nthFibo(n - 1) + nthFibo(n - 2);
 };
 
 // 27. Given an array of words, return a new array containing each word capitalized.
@@ -508,4 +508,42 @@ var common = function(number1, number2){
     number += addition
   }
   return number
+}
+
+/**
+ * Matrix Spiral
+ *
+ * Write a function that accepts an integer N
+ * and returns a NxN spiral matrix.
+ *
+ * Examples:
+ * matrix(2) = [[1, 2],
+ *              [4, 3]]
+ *
+ * matrix(3) = [[1, 2, 3],
+ *              [8, 9, 4],
+ *              [7, 6, 5]]
+ *
+ * matrix(4) = [[1,   2,  3, 4],
+ *              [12, 13, 14, 5],
+ *              [11, 16, 15, 6],
+ *              [10,  9,  8, 7]]
+ */
+
+function matrix(n) {
+  let output = [];
+
+}
+
+var maxChar = (str) => {
+	let array = str.split("");
+	let frequency = {};
+	for (let i = 0; i < array.length; i++){
+    	if (frequency[array[i]]){
+			frequency[array[i]] += 1;
+        } else {
+			frequency[array[i]] = 1;
+        }
+	}
+	return frequency
 }
