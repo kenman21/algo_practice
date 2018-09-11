@@ -547,3 +547,13 @@ var maxChar = (str) => {
 	}
 	return frequency
 }
+
+var pyramid = (num) => {
+    if (num === 1) {
+        console.log("#")
+    } else {
+		pyramid(num-1)
+        console.log(Array(2*num -1).fill("#").join(""))
+
+    }
+}
