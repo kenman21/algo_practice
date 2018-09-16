@@ -227,12 +227,12 @@ var fizzBuzz = function(n) {
     array.push(i)
   }
   for (let i = 0; i < array.length; i++){
-      if (array[i] % 3 === 0){
+      if (array[i] % 3 === 0 && array[i] % 5 === 0){
+        array[i] = "FizzBuzz";
+      } else if (array[i] % 3 === 0){
         array[i] = "Fizz";
       } else if (array[i] % 5 === 0){
         array[i] = "Buzz";
-      } else if (array[i] % 3 === 0 && array[i] % 5 === 0){
-        array[i] = "FizzBuzz";
       }
   }
   return array
