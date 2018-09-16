@@ -222,6 +222,11 @@ var buildList = function(value, length) {
 // For numbers which are multiples of both three and five, output “FizzBuzz” instead of the number.
 // fizzBuzz(5) // ['1','2','Fizz','4','Buzz']
 var fizzBuzz = function(n) {
+  let array = [];
+  for (let i = 1; i <= n; i++){
+    array.push(i)
+  }
+  
 };
 
 // 20. Count the occurence of a value in a list.
@@ -575,4 +580,4 @@ class Queue {
 	remove (num) {
 		return this.items.pop()
     }
-}	
+}
